@@ -1,0 +1,10 @@
+PyPDF2
+langchain
+langchain_community
+langchain_groq
+langchain_huggingface
+tiktoken 
+faiss-cpu
+flask 
+gunicorn
+python-dotenv
