@@ -2,17 +2,17 @@ import os
 from dotenv import load_dotenv
 
 from PyPDF2 import PdfReader
-from langchain.vectorstores import FAISS
 
 from flask import Flask, request, jsonify
 from langchain_groq.chat_models import ChatGroq
-from langchain.text_splitter import CharacterTextSplitter
 
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import (create_retrieval_chain,
                               create_history_aware_retriever, create_retrieval_chain)
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_community.vectorstores import FAISS
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_text_splitters import CharacterTextSplitter
 
 # Load environment variables
 load_dotenv()
